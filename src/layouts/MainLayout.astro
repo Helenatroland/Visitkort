@@ -8,11 +8,17 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{Astro.props.title}</title>
 		<script defer src="https://unpkg.com/tailwindcss-intersect@2.x.x/dist/observer.min.js"></script>
+		
+<link rel="icon" href="/favicon.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+
+
 
 		    <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
