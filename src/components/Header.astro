@@ -1,5 +1,46 @@
----
----
-<div>
-Header - tilføj navigation mm.
-</div>
+<header class="relative p-4">
+  <div class="flex items-center justify-between max-w-6xl mx-auto">
+    <!-- Logo -->
+    <div class="flex items-center">
+      <a href="/">
+        <img src="/src/assets/images/logo.svg" alt="logo" class="w-[120px]" />
+      </a>
+    </div>
+
+    <!-- Burger Button (kun på mobil) -->
+    <button id="burger" class="md:hidden flex flex-col justify-between w-8 h-6 focus:outline-none">
+      <span class="block h-1 w-full bg-[#53081B] transition-all duration-200 hover:scale-110 hover:bg-[#AE3359]"></span>
+      <span class="block h-1 w-full bg-[#53081B] transition-all duration-200 hover:scale-110 hover:bg-[#AE3359]"></span>
+      <span class="block h-1 w-full bg-[#53081B] transition-all duration-200 hover:scale-110 hover:bg-[#AE3359]"></span>
+    </button>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-6 text-[#53081B] font-medium md:text-lg">
+      <a href="/" class="transition-transform duration-200 hover:scale-110 hover:text-[#AE3359] active:scale-110">Home</a>
+      <a href="/aboutMe" class="transition-transform duration-200 hover:scale-110 hover:text-[#AE3359] active:scale-110">About Me</a>
+      <a href="/myProjects" class="transition-transform duration-200 hover:scale-110 hover:text-[#AE3359] active:scale-110">My Projects</a>
+    </nav>
+  </div>
+
+  <!-- Rød streg over hele skærmen med lille gap over -->
+  <div class="absolute left-0 right-0 top-full mt-1 h-[5px] bg-[#AE3359]"></div>
+  <div class="mt-4"></div> <!-- gap under stregen -->
+
+  <!-- Mobile Menu -->
+  <nav id="nav" class="hidden md:hidden mt-4">
+    <ul class="flex flex-col items-center space-y-4 py-4 text-base">
+      <li><a href="/" class="transition-transform duration-200 hover:scale-110 hover:text-[#AE3359] active:scale-110 text-[#53081B]">Home</a></li>
+      <li><a href="/aboutMe" class="transition-transform duration-200 hover:scale-110 hover:text-[#AE3359] active:scale-110 text-[#53081B]">About Me</a></li>
+      <li><a href="/myProjects" class="transition-transform duration-200 hover:scale-110 hover:text-[#AE3359] active:scale-110 text-[#53081B]">My Projects</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const burger = document.getElementById("burger");
+  const nav = document.getElementById("nav");
+
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("hidden");
+  });
+</script>

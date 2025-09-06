@@ -1,5 +1,17 @@
 ---
+const { href, class: className = "", children } = Astro.props;
 ---
-<div>
-    <button class="border-2 border-black"><slot /></button>
-</div>
+
+<a
+  href={href}
+  class={`w-[160px] h-[65px] 
+          bg-[#AE3359] 
+          text-white text-lg font-semibold
+          rounded-[70px] 
+          border-[5px] border-[#53081B] 
+          flex items-center justify-center
+          hover:text-black hover:scale-105 transition duration-300
+          ${className}`}
+>
+  <span class="text-center">{children}</span>
+</a>

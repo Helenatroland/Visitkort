@@ -1,15 +1,64 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
+import MainLayout from '../layouts/MainLayout.astro';
 import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+import img1 from '../assets/images/img1.png';
+import flowers from '../assets/images/flowers.svg';
 ---
-<MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+
+<MainLayout title="Home">
+  <article class="space-y-8 md:space-y-10">
+
+    <!-- H1 Sektion med ekstra luft over -->
+    <h1 class="text-center text-6xl sm:text-8xl md:text-8xl text-[#53081B] pt-20 sm:pt-24 md:pt-28 pb-8 sm:pb-10 md:pb-12">
+      <div class="mb-6 sm:mb-8 md:mb-8 leading-none">HELENA</div>
+      <div class="mb-6 sm:mb-8 md:mb-8 leading-none">MØLLER</div>
+      <div class="mb-6 sm:mb-8 md:mb-8 leading-none">TROLAND</div>
+    </h1>
+
+    <!-- Image Sektion -->
+    <div class="mx-auto w-[90%] sm:w-[600px] bg-[#53081B] p-8">
+      <Image 
+        src={img1} 
+        alt="image 1" 
+        width={600} 
+        height={600} 
+        class="mx-auto"
+      />
+    </div>
+
+    <!-- H2 Sektion -->
+    <h2 class="text-center text-3xl sm:text-5xl md:text-7xl pt-6 sm:pt-6 md:pt-8 pb-6 sm:pb-6 md:pb-8" 
+        style="color: #AE3359">
+      A visual identity with character
+    </h2>
+
+    <!-- Intro Tekst Sektion -->
+    <div class="mx-auto w-[90%] sm:w-[85%] md:w-[50%] bg-[#F0C6B4] p-6 sm:p-8 md:p-10">
+      <p class="leading-relaxed sm:leading-loose md:leading-loose">
+        As a Multimedia Design student at EK, I am dedicated to delivering my best work while continuously developing my creative and technical skills throughout my studies. <br><br>
+        I am eager to explore innovative solutions within digital design, web development, and visual communication, and I strive to combine creativity with structure to create engaging and user-friendly results.
+      </p>
+    </div>
+
+    <!-- H3 Sektion -->
+    <h3 class="text-center text-2xl sm:text-3xl md:text-5xl pt-6 sm:pt-6 md:pt-8 pb-6 sm:pb-6 md:pb-8" 
+        style="color: #AE3359">
+      You can look more into my projects below
+    </h3>
+
+    <!-- Button Sektion -->
+    <Button href="/myProjects" class="mx-auto">My Projects</Button>
+
+    <!-- Flowers Image Sektion -->
+    <Image 
+      src={flowers} 
+      alt="flowers" 
+      width={600} 
+      height={600} 
+      class="mx-auto p-12 sm:p-10 md:p-8"
+    />
+
+  </article>
 </MainLayout>
