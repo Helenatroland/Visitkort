@@ -1,5 +1,5 @@
 ---
-const { href, class: className = "", children } = Astro.props;
+const { href, class: className = "" } = Astro.props;
 ---
 
 <a
@@ -13,5 +13,7 @@ const { href, class: className = "", children } = Astro.props;
           hover:text-black hover:scale-105 transition duration-300
           ${className}`}
 >
-  <span class="text-center">{children}</span>
+  <span class="text-center">
+    <slot /> <!-- her kommer teksten ind -->
+  </span>
 </a>
